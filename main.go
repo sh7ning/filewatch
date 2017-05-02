@@ -95,7 +95,7 @@ func getFilename(r *http.Request) string {
 
 func getRawFilename(r *http.Request) string {
     filename := r.FormValue("filename");
-    // TODO 404 文件名为空的时候异常处理
+    // TODO 404 文件名为空的时候异常处理: panic defer
     // if filename == "" {
     //     log.Println("文件名为空")
     //
