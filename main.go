@@ -87,7 +87,7 @@ func firstWrite(ws *websocket.Conn) {
 func getFilename(r *http.Request) string {
     // TODO 基础目录配置
     baseDir := map[string]string{
-        "filewatch": "/Users/develop/workspace/study/golang/src/filewatch/",
+        "filewatch": "./", //更新为绝对路径
     }
     // TODO filename参数 为空的处理，同时为了安全:filename 拼接后必须在 配置目录之下，不允许执行到其他目录
     return baseDir["filewatch"] + getRawFilename(r)
